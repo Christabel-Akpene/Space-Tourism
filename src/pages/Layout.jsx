@@ -4,7 +4,7 @@ import { Outlet, useLocation } from "react-router"
 const Layout = () => {
     const location = useLocation();
 
-    console.log(location.pathname);
+    
     const backgroundImages = {
         "/": "images/home/background-home-desktop.jpg",
         "/crew": "images/crew/background-crew-desktop.jpg",
