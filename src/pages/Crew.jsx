@@ -28,7 +28,7 @@ const Crew = () => {
                     onClick={() => changeCrew(index)}
                     className={`${
                       selected === index ? " bg-white" : "bg-gray-500"
-                    } w-3 h-3 mt-16 rounded-full inline`}
+                    } w-3 h-3 mt-16 rounded-full inline cursor-pointer`}
                   >
                   </span>
                 );

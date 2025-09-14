@@ -27,9 +27,7 @@ const Destination = () => {
                   <button key={destination.name} onClick={() => changeDestination(index)} className="cursor-pointer">
                     <span className={`relative pb-2 ${selected === index ? "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-white after:w-full after:transition-all after:duration-300" : "after:w-0"}`}>
                         {destination.name.toUpperCase()}
-
                     </span>
-
                   </button>
                   );
 
