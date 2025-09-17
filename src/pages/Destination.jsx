@@ -9,18 +9,18 @@ const Destination = () => {
   };
 
   return (
-    <div className="text-white w-[80vw] m-auto">
-      <p className="text-lg">
+    <div className="text-white w-full px-10 lg:px-0 sm:w-[80vw] m-auto">
+      <p className="text-sm sm:mt-10 sm:text-lg lg:mt-0">
         <span className="text-gray-500 mr-4 font-bold">01</span>PICK YOUR
         DESTINATION
       </p>
 
-      <div className="flex space-x-28 justify-between items-center mt-16 pb-10">
+      <div className="flex flex-col space-y-8  lg:flex-row lg:space-x-28 justify-between items-center mt-16 pb-10">
         <div className="">
           <img src={data.destinations[selected].images.png} />
         </div>
-        <div className="w-[35vw]">
-            <div className="flex space-x-5 text-md mb-10">
+        <div className="text-center lg:text-left lg:w-[35vw]">
+            <div className="flex justify-center lg:items-start lg:justify-start space-x-5 text-md mb-10">
               {
                 data.destinations.map((destination, index) => {
                   return(
@@ -30,13 +30,12 @@ const Destination = () => {
                     </span>
                   </button>
                   );
-
                 })
               }
             
           </div>
 
-          <p className="text-7xl mb-8 uppercase">
+          <p className="text-5xl sm:text-7xl mb-8 uppercase">
             {data.destinations[selected].name}
           </p>
           <p className="font-serif mb-8">
@@ -44,7 +43,7 @@ const Destination = () => {
           </p>
           <hr />
 
-          <div className="flex justify-between mt-5">
+          <div className="flex flex-col space-y-5 lg:space-y-0 sm:flex-row justify-between mt-5">
             <div>
               <p className="text-sm">AVG. DISTANCE</p>
               <p className="text-lg uppercase font-semibold">
