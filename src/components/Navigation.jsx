@@ -1,8 +1,9 @@
-import { NavLink } from "react-router";
-import { useState } from "react";
+import { NavLink, useLocation } from "react-router";
+import { useState, useEffect } from "react";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   const openNav = () => {
     setOpen(!open);
@@ -13,6 +14,11 @@ const Navigation = () => {
     console.log("close nav")
 
   }
+
+  useEffect(() => {
+    setOpen(false)
+  }, [location]);
+  
   return (
     <div className="py-8 flex justify-between items-center text-white">
       <div className=" px-7 lg:pl-20">
@@ -30,16 +36,16 @@ const Navigation = () => {
                 <img src="images/shared/icon-close.svg" alt="" />
             </button>
             <ul className="flex flex-col space-y-10 text-2xl pl-8">
-              <NavLink>
+              <NavLink to={"/"}>
                   <li><span className="font-bold">00</span> <span className="text-gray-400">Home</span></li>
               </NavLink>
-              <NavLink>
+              <NavLink to={"/destination"}>
                   <li><span className="">01</span> <span className="text-gray-400">Destination</span></li>
               </NavLink>
-              <NavLink>
+              <NavLink to={"/crew"}>
                   <li><span className="">02</span> <span className="text-gray-400">Crew</span></li>
               </NavLink>
-              <NavLink>
+              <NavLink to={"/technology"}>
                   <li><span className="">03</span> <span className="text-gray-400">Technology</span></li>
               </NavLink>
             </ul>
