@@ -25,7 +25,6 @@ const Layout = () => {
     },
   };
 
-  // const backgroundImage = backgroundImages[location.pathname] || "none";
 
   return (
     <div

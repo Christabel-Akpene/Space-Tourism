@@ -42,7 +42,7 @@ const Technology = () => {
         <div className="order-1 lg:order-3">
           <picture>
             <source srcset={data.technology[selected].images.portrait} media="(min-width:1024px)" />
-            <img src={data.technology[selected].images.landscape} alt="image"  className="w-full h-auto object-contain lg:max-w-md "  />
+            <img src={data.technology[selected].images.landscape} alt={data.technology[selected].name}  className="w-full h-auto object-contain lg:max-w-md "  />
           </picture>
         </div>
 

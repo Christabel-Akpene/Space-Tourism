@@ -17,7 +17,7 @@ const Destination = () => {
 
       <div className="flex flex-col space-y-8  lg:flex-row lg:space-x-28 justify-between items-center mt-16 pb-10">
         <div className="">
-          <img src={data.destinations[selected].images.png} />
+          <img src={data.destinations[selected].images.png} alt={data.destinations[selected].name} />
         </div>
         <div className="text-center lg:text-left lg:w-[35vw]">
             <div className="flex justify-center lg:items-start lg:justify-start space-x-5 text-md mb-10">

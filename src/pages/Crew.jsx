@@ -24,7 +24,7 @@ const Crew = () => {
               {data.crew.map((person, index) => {
                 return (
                   <span
-                    key={person.role}
+                    key={person.name}
                     onClick={() => changeCrew(index)}
                     className={`${
                       selected === index ? " bg-white" : "bg-gray-500"
@@ -37,7 +37,7 @@ const Crew = () => {
         </div>
 
         <div className="flex-1 justify-center">
-          <img src={data.crew[selected].images.png}  className="max-w-xs w-full h-auto object-contain"/>
+          <img src={data.crew[selected].images.png}  alt={data.crew[selected].name} className="max-w-xs w-full h-auto object-contain"/>
         </div>
       </div>
     </div>

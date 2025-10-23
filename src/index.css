@@ -7,3 +7,16 @@
   --font-cardo: "Cardo", serif;
 }
 
+@layer components {
+  .nav-link-active {
+    @apply cursor-pointer relative pb-2;
+  }
+
+  .nav-link-active.active::after {
+    @apply content-[''] absolute left-0 bottom-0 h-[2px] bg-white w-full transition-all duration-300;
+  }
+
+  .nav-link-active:not(.active)::after {
+    @apply w-0;
+  }
+}
