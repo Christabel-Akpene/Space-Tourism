@@ -27,7 +27,7 @@ const Navigation = () => {
   const getActiveClassName = (isActive) =>
   `cursor-pointer relative pb-2 ${
     isActive
-      ? "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-white after:w-full after:transition-all after:duration-300"
+      ? "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-white after:w-full after:transition-all after:duration-600"
       : "after:w-0"
   }`;
 

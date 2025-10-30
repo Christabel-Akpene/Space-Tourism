@@ -8,12 +8,12 @@ const Crew = () => {
   };
 
   return (
-    <div className="text-white w-full px-10 lg:px-0 lg:w-[80vw] m-auto">
+    <div className="text-white w-full px-10 lg:px-0 lg:w-[80vw] m-auto animate-slideIn">
       <p className="text-sm sm:mt-10 sm:text-lg lg:mt-0">
         <span className="text-gray-500 mr-4 font-bold">02</span>PICK YOUR CREW
       </p>
 
-      <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-28 justify-between items-center mt-10 pb-10">
+      <div key={selected} className="flex flex-col space-y-8 lg:flex-row lg:space-x-28 justify-between items-center mt-10 pb-10  animate-slideUp">
         <div className="text-center lg:text-left lg:w-[35vw]">
           <p className="text-2xl mb-8 uppercase">{data.crew[selected].role}</p>
           <p className="mb-8 text-4xl font-semi-bold sm:text-6xl">

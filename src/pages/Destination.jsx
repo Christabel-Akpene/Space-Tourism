@@ -9,13 +9,13 @@ const Destination = () => {
   };
 
   return (
-    <div className="text-white w-full px-10 lg:px-0 sm:w-[80vw] m-auto">
+    <div className="text-white w-full px-10 lg:px-0 sm:w-[80vw] m-auto animate-slideIn">
       <p className="text-sm sm:mt-10 sm:text-lg lg:mt-0">
         <span className="text-gray-500 mr-4 font-bold">01</span>PICK YOUR
         DESTINATION
       </p>
 
-      <div className="flex flex-col space-y-8  lg:flex-row lg:space-x-28 justify-between items-center mt-16 pb-10">
+      <div key={selected} className="flex flex-col space-y-8  lg:flex-row lg:space-x-28 justify-between items-center mt-16 pb-10  animate-slideUp">
         <div className="">
           <img src={data.destinations[selected].images.png} alt={data.destinations[selected].name} />
         </div>
